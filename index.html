@@ -1,203 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kailash Restaurant Menu</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kailash Restaurant Menu</title>
 
-  <!-- Swiper CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+<!-- PageFlip CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/page-flip/dist/css/page-flip.min.css">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+Gujarati:wght@400;500&display=swap" rel="stylesheet">
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Noto+Sans+Gujarati&display=swap" rel="stylesheet">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Poppins', sans-serif;
-      background: #f7f5f2;
-      color: #222;
-    }
+<style>
+body {
+  margin: 0;
+  background: #1b1b1b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+}
 
-    .swiper {
-      width: 100vw;
-      height: 100vh;
-    }
+#book {
+  width: 90vw;
+  max-width: 420px;
+  height: 90vh;
+}
 
-    /* COVER PAGE */
-    .cover {
-    .cover {
+.page {
+  background: #f9f6f1;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.cover {
+  background: linear-gradient(135deg, #7a1f2b, #2b2b2b);
+  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background:
-    radial-gradient(circle at center, #3a2a24 0%, #1a1a1a 60%),
-    linear-gradient(135deg, #7a1f2b, #2b2b2b);
-  color: #fff;
-  text-align: center;
-  padding: 30px;
-    }
+}
 
-    .cover h1 {
-      font-size: 32px;
-      margin-bottom: 5px;
-    }
+.cover img {
+  background: #fff;
+  padding: 15px;
+  border-radius: 16px;
+  width: 180px;
+}
 
-    .cover h2 {
-      font-family: 'Noto Sans Gujarati', sans-serif;
-      font-size: 20px;
-      font-weight: 400;
-      margin-bottom: 20px;
-    }
+.cover h1 {
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
 
-    .cover p {
-      opacity: 0.9;
-      font-size: 14px;
-      animation: blink 1.5s infinite;
-    }
+.cover h2 {
+  font-family: 'Noto Sans Gujarati', sans-serif;
+  opacity: 0.9;
+}
 
-    @keyframes blink {
-      50% { opacity: 0.4; }
-    }
+.section-title {
+  font-size: 20px;
+  font-weight: 600;
+}
 
-    /* SECTION PAGE */
-    .page {
-      padding: 20px;
-      overflow-y: auto;
-    }
+.section-gu {
+  font-family: 'Noto Sans Gujarati', sans-serif;
+  color: #555;
+  margin-bottom: 10px;
+}
 
-    .section-title {
-      font-size: 22px;
-      font-weight: 600;
-      margin-bottom: 4px;
-    }
+.item {
+  margin-bottom: 12px;
+}
 
-    .section-gu {
-      font-family: 'Noto Sans Gujarati', sans-serif;
-      color: #555;
-      margin-bottom: 10px;
-    }
+.item-name {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+}
 
-    .divider {
-      height: 2px;
-      background: #1f4d3a;
-      width: 60px;
-      margin-bottom: 20px;
-    }
+.price {
+  color: #7a1f2b;
+}
 
-    /* ITEM CARD */
-    .item {
-      background: #fff;
-      border-radius: 12px;
-      padding: 14px 16px;
-      margin-bottom: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-
-    .item-name {
-      font-weight: 600;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .price {
-      font-weight: 600;
-      color: #1f4d3a;
-    }
-
-    .item-gu {
-      font-family: 'Noto Sans Gujarati', sans-serif;
-      font-size: 14px;
-      color: #666;
-      margin-top: 2px;
-    }
-
-    .tag {
-      font-size: 14px;
-      margin-left: 6px;
-    }
-  </style>
+.item-gu {
+  font-family: 'Noto Sans Gujarati', sans-serif;
+  font-size: 14px;
+  color: #666;
+}
+</style>
 </head>
+
 <body>
 
-  <div class="swiper">
-    <div class="swiper-wrapper">
+<div id="book">
 
-      <!-- COVER -->
-      <div class="swiper-slide cover">
-  <div style="
-    background:#f9f6f1;
-    padding:20px 26px;
-    border-radius:18px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.35);
-    margin-bottom:20px;
-  ">
-    <img src="logo.png" alt="Kailash Restaurant Logo" style="width:180px; max-width:70vw;">
+  <!-- COVER -->
+  <div class="page cover">
+    <img src="logo.png" alt="Kailash Logo">
+    <h1>KAILASH RESTAURANT</h1>
+    <h2>કૈલાશ રેસ્ટોરન્ટ</h2>
+    <p>Swipe to open menu 📖</p>
   </div>
 
-  <h1 style="letter-spacing:1px;">KAILASH RESTAURANT</h1>
-  <h2 style="font-family:'Noto Sans Gujarati',sans-serif; opacity:0.9;">
-    કૈલાશ રેસ્ટોરન્ટ
-  </h2>
+  <!-- PUNJABI PAGE 1 -->
+  <div class="page">
+    <div class="section-title">PUNJABI · SABJI (350gm)</div>
+    <div class="section-gu">પંજાબી · શાક 🌿</div>
 
-  <p style="margin-top:25px; font-size:14px; opacity:0.8;">
-    👉 Swipe to open menu
-  </p>
-</div>
+    <div class="item">
+      <div class="item-name">KAILAS SPECIAL <span class="price">₹250</span></div>
+      <div class="item-gu">કૈલાસ સ્પેશિયલ</div>
+    </div>
 
-      <!-- PUNJABI -->
-      <div class="swiper-slide page">
-        <div class="section-title">PUNJABI · SABJI (350gm)</div>
-        <div class="section-gu">પંજાબી · શાક (૩૫૦ ગ્રામ) 🌿</div>
-        <div class="divider"></div>
+    <div class="item">
+      <div class="item-name">PANEER KADAI <span class="price">₹220</span></div>
+      <div class="item-gu">પનીર કડાઈ</div>
+    </div>
 
-        <div class="item">
-          <div class="item-name">KAILAS SPECIAL <span class="price">₹250</span></div>
-          <div class="item-gu">કૈલાસ સ્પેશિયલ</div>
-        </div>
+    <div class="item">
+      <div class="item-name">PANEER TIKKA MASALA <span class="price">₹220</span></div>
+      <div class="item-gu">પનીર ટિક્કા મસાલા</div>
+    </div>
 
-        <div class="item"><div class="item-name">PANEER KADAI <span class="price">₹220</span></div><div class="item-gu">પનીર કડાઈ</div></div>
-        <div class="item"><div class="item-name">PANEER TIKKA MASALA <span class="price">₹220</span></div><div class="item-gu">પનીર ટિક્કા મસાલા</div></div>
-        <div class="item"><div class="item-name">PANEER TUFANI <span class="price">₹220</span></div><div class="item-gu">પનીર તુફાની</div></div>
-        <div class="item"><div class="item-name">PANEER PASANDA <span class="price">₹220</span></div><div class="item-gu">પનીર પસંદા</div></div>
-        <div class="item"><div class="item-name">PANEER BHURJI MASALA <span class="price">₹220</span></div><div class="item-gu">પનીર ભુરજી મસાલા</div></div>
-        <div class="item"><div class="item-name">PANEER HANDI <span class="price">₹220</span></div><div class="item-gu">પનીર હાંડી</div></div>
-        <div class="item"><div class="item-name">PANEER TAVA MASALA <span class="price">₹220</span></div><div class="item-gu">પનીર તવા મસાલા</div></div>
-
-        <div class="item"><div class="item-name">METHI MUTTER PANEER <span class="price">₹210</span></div><div class="item-gu">મેથી મટર પનીર</div></div>
-        <div class="item"><div class="item-name">SHAHI PANEER <span class="price">₹220</span></div><div class="item-gu">શાહી પનીર</div></div>
-        <div class="item"><div class="item-name">MUTTER PANEER <span class="price">₹210</span></div><div class="item-gu">મટર પનીર</div></div>
-        <div class="item"><div class="item-name">PALAK PANEER <span class="price">₹200</span></div><div class="item-gu">પાલક પનીર</div></div>
-        <div class="item"><div class="item-name">PANEER LABABDAR <span class="price">₹200</span></div><div class="item-gu">પનીર લબાબદાર</div></div>
-
-        <div class="item"><div class="item-name">CHEESE BUTTER MASALA <span class="price">₹250</span></div><div class="item-gu">ચીઝ બટર મસાલા</div></div>
-        <div class="item"><div class="item-name">CHEESE PANEER BUTTER MASALA <span class="price">₹250</span></div><div class="item-gu">ચીઝ પનીર બટર મસાલા</div></div>
-        <div class="item"><div class="item-name">CHEESE ANGARA <span class="price">₹250</span></div><div class="item-gu">ચીઝ અંગારા</div></div>
-        <div class="item"><div class="item-name">PANEER ANGARA <span class="price">₹230</span></div><div class="item-gu">પનીર અંગારા</div></div>
-
-        <div class="item"><div class="item-name">KAJU PANEER MASALA <span class="price">₹250</span></div><div class="item-gu">કાજુ પનીર મસાલા</div></div>
-        <div class="item"><div class="item-name">KAJU MASALA <span class="price">₹250</span></div><div class="item-gu">કાજુ મસાલા</div></div>
-        <div class="item"><div class="item-name">KAJU CURRY <span class="price">₹250</span></div><div class="item-gu">કાજુ કરી</div></div>
-
-        <div class="item"><div class="item-name">KOYA KAJU <span class="tag">🍯</span> <span class="price">₹250</span></div><div class="item-gu">કોયા કાજુ</div></div>
-        <div class="item"><div class="item-name">MALAI KOFTA <span class="tag">🍯</span> <span class="price">₹210</span></div><div class="item-gu">મલાઈ કોફ્તા</div></div>
-        <div class="item"><div class="item-name">NAVRATNA KORMA <span class="tag">🍯</span> <span class="price">₹210</span></div><div class="item-gu">નવરત્ન કોરમા</div></div>
-
-      </div>
-
+    <div class="item">
+      <div class="item-name">METHI MUTTER PANEER <span class="price">₹210</span></div>
+      <div class="item-gu">મેથી મટર પનીર</div>
     </div>
   </div>
 
-  <!-- Swiper JS -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-  <script>
-    new Swiper('.swiper', {
-      direction: 'horizontal',
-      resistanceRatio: 0.4
-    });
-  </script>
+  <!-- PUNJABI PAGE 2 -->
+  <div class="page">
+    <div class="item">
+      <div class="item-name">KOYA KAJU 🍯 <span class="price">₹250</span></div>
+      <div class="item-gu">કોયા કાજુ</div>
+    </div>
+
+    <div class="item">
+      <div class="item-name">MALAI KOFTA 🍯 <span class="price">₹210</span></div>
+      <div class="item-gu">મલાઈ કોફ્તા</div>
+    </div>
+
+    <div class="item">
+      <div class="item-name">NAVRATNA KORMA 🍯 <span class="price">₹210</span></div>
+      <div class="item-gu">નવરત્ન કોરમા</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PageFlip JS -->
+<script src="https://cdn.jsdelivr.net/npm/page-flip/dist/page-flip.browser.min.js"></script>
+<script>
+const pageFlip = new St.PageFlip(
+  document.getElementById("book"),
+  {
+    width: 380,
+    height: 600,
+    size: "stretch",
+    maxShadowOpacity: 0.5,
+    showCover: true,
+    mobileScrollSupport: false
+  }
+);
+
+pageFlip.loadFromHTML(document.querySelectorAll(".page"));
+</script>
 
 </body>
 </html>
